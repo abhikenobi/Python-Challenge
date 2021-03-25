@@ -36,6 +36,7 @@ with open(budget_csv) as csvfile:
     csv_header = next(csvreader)
 
     #have to extract first row of data to keep net monthly change in line with the rest of the data
+    #sets loop's start point at 2nd row
     first_row = next(csvreader)
     #add the same counters as in the for loop
     totalmonths += 1
