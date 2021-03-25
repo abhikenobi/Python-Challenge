@@ -85,4 +85,22 @@ print(f"Net Total : ${net_total}")
 print(f"Average Change: ${avg_monthly_change}")
 print(f"Greatest Increase in Profits: {max_month}  (${maxincrease})")
 print(f"Greatest Decrease in Profits: {min_month} (${minincrease})")
+
+#Set up variables for each line of text
+title = "--------------------------Financial Analysis------------------------"
+line1 = "--------------------------------------------------------------------"
+line2 = f"Total Months: {totalmonths}"
+line3 = f"Net Total : ${net_total}"
+line4 = f"Average Change: ${avg_monthly_change}"
+line5 = f"Greatest Increase in Profits: {max_month}  (${maxincrease})"
+line6 = f"Greatest Decrease in Profits: {min_month} (${minincrease})"
 #write into .txt file in Analysis folder
+output_file = open('Analysis/Financial_Analysis.txt', 'w')
+output_file.write(title + "\n")
+output_file.write(line1 + "\n")
+output_file.write(line2 + "\n")
+output_file.write(line3 + "\n")
+output_file.write(line4 + "\n")
+output_file.write(line5 + "\n")
+output_file.write(line6 + "\n")
+output_file.close()
