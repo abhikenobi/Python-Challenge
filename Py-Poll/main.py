@@ -76,11 +76,9 @@ while i < len(candidates):
     i += 1
 finalline = f"Winner: {winner}"
 lines.append(finalline)
-#function to print all to terminal
 #for line in lines:
-#    print(line)
-
-
+    #print(lines)
+    
 #Print to terminal
 title = "Election Results"
 line1 = "---------------------------------------"
