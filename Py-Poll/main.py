@@ -8,7 +8,7 @@ import statistics
 #total number of votes in the election
 total_votes = 0
 #% of total votes
-votes_percent = 0
+votes_percent = 0.0000
 #list with all the candidates
 candidates = []
 #number of votes for each candidate, w/ position in list corresponding to candidate's position in candidates list
@@ -52,10 +52,11 @@ with open(election_csv) as csvfile:
     #resetting index to start at start of list
     index = 0
     while index < len(num_of_votes):
-        votes_percent = round((num_of_votes[index]/total_votes)*100, 4)
+        votes_percent = float(num_of_votes[index])/float(total_votes)*100
+        votes_percent = round(votes_percent, 3)
         percent_of_votes.append(votes_percent)
         index += 1
-    print(percent_of_votes)
+    #print(percent_of_votes)
     
     #winner is the one with the most votes
     winningvotes = max(num_of_votes)
@@ -63,18 +64,57 @@ with open(election_csv) as csvfile:
     index = num_of_votes.index(winningvotes)
     winner = candidates[index]
 
+#fuction to print more line if there's more candidates
+#set up start point
+i = 0
+#list for lines of text
+lines = []
+while i < len(candidates):
+    #variable for each line of text
+    line= f"{candidates[i]}: {percent_of_votes[i]:.3f}% ({num_of_votes[i]} votes)"
+    lines.append(line)
+    i += 1
+finalline = f"Winner: {winner}"
+lines.append(finalline)
+#function to print all to terminal
+#for line in lines:
+#    print(line)
 
-#Goals
-#Total # of votes cast -done
-#Complete list of candidates who received votes -done
-#Total number of votes each candidate won - done
-#Percentage of total votes each candidate won - done
-#Winner based on popular election
 
 #Print to terminal
 title = "Election Results"
 line1 = "---------------------------------------"
 line2 = f"Total Votes: {total_votes}"
-line3 = "---------------------------------------"
-line4 = f"{candidates[0]}: "
+# :.3f to round that number to 3 decimal places
+line4 = lines[0]
+line5 = lines[1]
+line6 = lines[2]
+line7 = lines[3]
+line8 = lines[4]
+print(title)
+print(line1)
+print(line2)
+print(line1)
+print(line4)
+print(line5)
+print(line6)
+print(line7)
+print(line1)
+print(line8)
 #Create and write to new text file
+output_file = open('Analysis/Election_Results.txt', 'w')
+output_file.write(title + "\n")
+output_file.write(line1 + "\n")
+output_file.write(line2 + "\n")
+output_file.write(line1 + "\n")
+#set up counter
+i=0
+#while loop set to stop before final line in list
+while i < len(lines) - 1:
+    output_file.write(lines[i] + "\n")
+    i += 1
+#else when i = len(lines) - 1 meaning you're at last item on list
+if i == len(lines)-1:
+    output_file.write(line1 + "\n")
+    output_file.write(lines[i] + "\n")
+output_file.close()
