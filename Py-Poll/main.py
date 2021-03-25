@@ -95,12 +95,15 @@ print(title)
 print(line1)
 print(line2)
 print(line1)
-print(line4)
-print(line5)
-print(line6)
-print(line7)
-print(line1)
-print(line8)
+#set up counter
+i=0
+#while loop set to stop before final line in list
+while i < len(lines) - 1:
+    print(lines[i])
+    i += 1
+if i == len(lines) - 1:
+    print(line1)
+    print(lines[i])
 #Create and write to new text file
 output_file = open('Analysis/Election_Results.txt', 'w')
 output_file.write(title + "\n")
