@@ -1,6 +1,8 @@
 #Import Modules
 import os
 import csv
+import math
+import statistics
 
 #set up variables
 #the total profit/loss for the whole dataset
@@ -18,7 +20,9 @@ minincrease = 0
 #the change in each month's profit/loss
 net_change = 0
 #list to house all the monthly changes in profit/loss
-netchange =[]
+netchange = []
+#list for all the months/dates in the dataset
+months= []
 
 #set up file path
 budget_csv = os.path.join("Resources", "budget_data.csv")
@@ -36,9 +40,10 @@ with open(budget_csv) as csvfile:
     #add the same counters as in the for loop
     totalmonths += 1
     net_total += int(first_row[1])
-    net_change = nettotal - int(first_row[1])
-    #define previous month's profit/loss, to get ready for the loop
-    prevtotal = int(first_row[1])
+    #define previous month's profit/loss to get ready for the loop
+    prev_profitloss = int(first_row[1])
+    #set up equation to calculate change between current and previous month's profit/loss
+    net_change = int(first_row[1]) - prev_profitloss
 
     for row in csvreader:
         #testing to see if loop works, comment out when code is finalized
@@ -46,21 +51,38 @@ with open(budget_csv) as csvfile:
         #total months counter
         totalmonths += 1
         #net total counter (net total = prev. net total + this month's profit/loss)
-        nettotal += int(row[1])
-
+        net_total += int(row[1])
+        #add current month to months list
+        months.append(row[0])
         #finding monthly change
+        net_change = int(row[1]) - prev_profitloss
         #adding each months profit/loss to a list
-        netchange.append(int(row[1]))
+        netchange.append(net_change)
+        #set current month's profit/loss as previous for next loop
+        prev_profitloss = int(row[1])
 
-#average change
+#calculate average monthly change, format to only show 2 decimal places
+avg_monthly_change = round(statistics.mean(netchange), 2)
+#print(avg_monthly_change)
 
-#greatest incease
+#greatest incease, round in case of cents
+maxincrease = round(max(netchange), 2)
+max_month = months[netchange.index(maxincrease)]
+#print(maxincrease)
+#print(months[netchange.index(maxincrease)])
 
-#greatest decrease
+#greatest decrease, round in case of cents
+minincrease = round(min(netchange), 2)
+min_month = months[netchange.index(minincrease)]
+#print(minincrease)
+#print(months[netchange.index(minincrease)])
 
 #print to terminal
 print("--------------------------Financial Analysis------------------------")
 print("--------------------------------------------------------------------")
 print(f"Total Months: {totalmonths}")
-print(f"Net Total : ${nettotal}")
+print(f"Net Total : ${net_total}")
+print(f"Average Change: ${avg_monthly_change}")
+print(f"Greatest Increase in Profits: {max_month}  (${maxincrease})")
+print(f"Greatest Decrease in Profits: {min_month} (${minincrease})")
 #write into .txt file in Analysis folder
