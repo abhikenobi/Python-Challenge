@@ -11,6 +11,8 @@ total_votes = 0
 candidates = []
 #number of votes for each candidate, w/ position in list corresponding to candidate's position in candidates list
 num_of_votes=[]
+#% of total votes for each candidate
+vote_percent = []
 
 #open up file
 election_csv = os.path.join("Resources", "election_data.csv")
@@ -42,6 +44,10 @@ with open(election_csv) as csvfile:
 #print(candidates)
 #print(num_of_votes)
 
+#resetting index to start at start of list
+index = 0
+while candidates:
+    
 
 #Goals
 #Total # of votes cast -done
@@ -55,4 +61,4 @@ print("Election Results")
 print("---------------------------------------")
 print(f"Total Votes: {total_votes}")
 print("---------------------------------------")
-#Creat and write to new text file
+#Create and write to new text file
