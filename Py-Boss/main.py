@@ -5,9 +5,12 @@ import math
 import statistics
 
 #set up variables
-First_Name = []
-Last_Name = []
-DOB = []
+first_name = []
+last_name = []
+dob = []
+ssn = []
+state = []
+employee_id = []
 #import state abbreviations from: https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5
 us_state_abbrev = {
     'Alabama': 'AL',
@@ -72,7 +75,7 @@ with open(employee_csv) as csvfile:
     #need to split name into first and last name and add to corresponding list
 
 #Goals
-#split name column into first name and last name columns
+#split name (firstname lastname) column into first name and last name columns
 #DOB (YYYY-MM-DD) rewritten as (MM/DD/YYYY)
 #SSN (###-##-####) rewritten to hide first 5 numbers (***-**-####)
 #abbreviate state
