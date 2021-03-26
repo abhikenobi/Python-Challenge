@@ -1,17 +1,20 @@
 #Import Modules
 import os
 import csv
-import math
-import statistics
 
 #set up variables
+name= " "
 first_name = []
 last_name = []
-dob = []
-ssn = []
-state = []
+dob = " "
+new_dob = []
+ssn = " "
+new_ssn = []
+state = " "
+state_abbrev = []
 employee_id = []
 #import state abbreviations from: https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5
+#https://gist.github.com/rogerallen/1583593 
 us_state_abbrev = {
     'Alabama': 'AL',
     'Alaska': 'AK',
@@ -72,10 +75,44 @@ with open(employee_csv) as csvfile:
     
     csv_header = next(csvreader)
 
-    #need to split name into first and last name and add to corresponding list
+    for row in csvreader:
+        #extract employee id #'s
+        employee_id.append(row[0])
+        #split name in each row using space as a delimiter
+        name = row[1].split(" ")
+        #add first split to first name list, second part to the last name list
+        first_name.append(name[0])
+        last_name.append(name[1])
+        #split old dob with delimiter of -
+        dob = row[2].split("-")
+        new_dob.append(f"{dob[1]}/{dob[2]}/{dob[0]}")
+        #split ssn using - as delimiter, add only the last split part to new list
+        ssn = row[3].split("-")
+        new_ssn.append(f"***-**-{ssn[2]}")
+        #extract state name
+        state = row[4]
+        state_abbrev.append(f"{us_state_abbrev[state]}")
+    #print(employee_id)
+    #print(first_name)
+    #print(last_name)
+    #print(new_dob)
+    #print(new_ssn)
+    #print(state_abbrev)
 
-#Goals
-#split name (firstname lastname) column into first name and last name columns
-#DOB (YYYY-MM-DD) rewritten as (MM/DD/YYYY)
-#SSN (###-##-####) rewritten to hide first 5 numbers (***-**-####)
-#abbreviate state
+    # Specify the file to write to
+    output_path = os.path.join("Analysis", "cleaned_employee_data.csv")
+
+    # Open the file using "write" mode. Specify the variable to hold the contents
+    with open(output_path, 'w', newline='') as csvfile:
+
+        # Initialize csv.writer
+        csvwriter = csv.writer(csvfile, delimiter=',')
+
+        # Write the first row (column headers)
+        csvwriter.writerow(['Emp ID', 'First Name', 'Last Name', 'DOB', 'SSN', 'State'])
+
+        # Use for loop to write rest of the rows
+        index=0
+        while index < len(employee_id):
+            csvwriter.writerow([employee_id[index], first_name[index], last_name[index], new_dob[index], new_ssn[index], state_abbrev[index]])
+            index += 1
