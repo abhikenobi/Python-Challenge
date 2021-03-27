@@ -23,7 +23,7 @@ winningvotes = 0
 election_csv = os.path.join("Resources", "election_data.csv")
 
 with open(election_csv) as csvfile:
-    csvreader=csv.reader(csvfile, delimiter=",")
+    csvreader = csv.reader(csvfile, delimiter=",")
 
     #skip top row containing the headers
     csv_header = next(csvreader)
@@ -71,28 +71,30 @@ i = 0
 lines = []
 while i < len(candidates):
     #variable for each line of text
+    # :.3f to round that number to 3 decimal places
     line= f"{candidates[i]}: {percent_of_votes[i]:.3f}% ({num_of_votes[i]} votes)"
     lines.append(line)
     i += 1
+#final line for list printing candidates and votes is the winner of election
 finalline = f"Winner: {winner}"
+#add finalline to the lines list to be final entry to list
 lines.append(finalline)
 #for line in lines:
     #print(lines)
     
 #Print to terminal
 title = "Election Results"
-line1 = "---------------------------------------"
+linebreak = "---------------------------------------"
 line2 = f"Total Votes: {total_votes}"
-# :.3f to round that number to 3 decimal places
 line4 = lines[0]
 line5 = lines[1]
 line6 = lines[2]
 line7 = lines[3]
 line8 = lines[4]
 print(title)
-print(line1)
+print(linebreak)
 print(line2)
-print(line1)
+print(linebreak)
 #set up counter
 i=0
 #while loop set to stop before final line in list
@@ -100,14 +102,16 @@ while i < len(lines) - 1:
     print(lines[i])
     i += 1
 if i == len(lines) - 1:
-    print(line1)
+    #if statement is to add linebreak before announcing winner
+    print(linebreak)
     print(lines[i])
+
 #Create and write to new text file
 output_file = open('Analysis/Election_Results.txt', 'w')
 output_file.write(title + "\n")
-output_file.write(line1 + "\n")
+output_file.write(linebreak + "\n")
 output_file.write(line2 + "\n")
-output_file.write(line1 + "\n")
+output_file.write(linebreak + "\n")
 #set up counter
 i=0
 #while loop set to stop before final line in list
@@ -116,6 +120,7 @@ while i < len(lines) - 1:
     i += 1
 #else when i = len(lines) - 1 meaning you're at last item on list
 if i == len(lines)-1:
-    output_file.write(line1 + "\n")
+    #if statement is to add linebreak before announcing winner
+    output_file.write(linebreak + "\n")
     output_file.write(lines[i] + "\n")
 output_file.close()

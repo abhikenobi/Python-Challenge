@@ -38,43 +38,55 @@ with open(budget_csv) as csvfile:
     #have to extract first row of data to keep net monthly change in line with the rest of the data
     #sets loop's start point at 2nd row
     first_row = next(csvreader)
+    
     #add the same counters as in the for loop
     totalmonths += 1
     net_total += int(first_row[1])
+    
     #define previous month's profit/loss to get ready for the loop
     prev_profitloss = int(first_row[1])
+    
     #set up equation to calculate change between current and previous month's profit/loss
     net_change = int(first_row[1]) - prev_profitloss
 
     for row in csvreader:
         #testing to see if loop works, comment out when code is finalized
         #print(row)
+
         #total months counter
         totalmonths += 1
+        
         #net total counter (net total = prev. net total + this month's profit/loss)
         net_total += int(row[1])
+        
         #add current month to months list
         months.append(row[0])
+        
         #finding monthly change
         net_change = int(row[1]) - prev_profitloss
+        
         #adding each months profit/loss to a list
         netchange.append(net_change)
+        
         #set current month's profit/loss as previous for next loop
         prev_profitloss = int(row[1])
 
 #calculate average monthly change, format to only show 2 decimal places
 avg_monthly_change = round(statistics.mean(netchange), 2)
+
 #print(avg_monthly_change)
 
 #greatest incease, round in case of cents
 maxincrease = round(max(netchange), 2)
 max_month = months[netchange.index(maxincrease)]
+
 #print(maxincrease)
 #print(months[netchange.index(maxincrease)])
 
 #greatest decrease, round in case of cents
 minincrease = round(min(netchange), 2)
 min_month = months[netchange.index(minincrease)]
+
 #print(minincrease)
 #print(months[netchange.index(minincrease)])
 

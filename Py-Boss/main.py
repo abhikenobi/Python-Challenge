@@ -13,8 +13,7 @@ new_ssn = []
 state = " "
 state_abbrev = []
 employee_id = []
-#import state abbreviations from: https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5
-#https://gist.github.com/rogerallen/1583593 
+#import state abbreviations from: https://gist.github.com/rogerallen/1583593 
 us_state_abbrev = {
     'Alabama': 'AL',
     'Alaska': 'AK',
@@ -92,6 +91,8 @@ with open(employee_csv) as csvfile:
         #extract state name
         state = row[4]
         state_abbrev.append(f"{us_state_abbrev[state]}")
+        #print(row)
+
     #print(employee_id)
     #print(first_name)
     #print(last_name)
@@ -116,3 +117,9 @@ with open(employee_csv) as csvfile:
         while index < len(employee_id):
             csvwriter.writerow([employee_id[index], first_name[index], last_name[index], new_dob[index], new_ssn[index], state_abbrev[index]])
             index += 1
+
+    #with open(output_path) as csvfile:
+        #csvreader = csv.reader(csvfile, delimiter=',')
+
+        #for row in csvreader:
+            #print(row)

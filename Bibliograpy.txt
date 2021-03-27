@@ -8,4 +8,8 @@ Kite.com
 
 w3schools.com 
 
-Python Dictionary for State Abbreviations: https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5
+Tutorialspoint.com
+
+Images from: Pexels.com
+
+Python Dictionary for State Abbreviations: https://gist.github.com/rogerallen/1583593 
