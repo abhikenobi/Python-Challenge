@@ -117,7 +117,7 @@ The task as the **Boss** is to write a Python script that is able to convert the
 * The `State` data should be re-written as simple two-letter abbreviations.
 
 To achieve the final results, the split function was heavily used. It easily allowed to separate a whole `Name` into the `First Name` and `Last Name` as well as separate the `DOB` from `YYYY-MM-DD` into `MM`, `DD`, and `Year`, which was then easily sorted back into `MM/DD/YYYY`.
-In order to abbreviate the states, a public state dictionary was used which contained the
+In order to abbreviate the states, a [public state dictionary](https://gist.github.com/rogerallen/1583593 "State Abbreviation Dictionary") was used which contained the
 full spelling as the **Key** and the abbreviation as the **Value**.
 
 The old employee was formatted as:
@@ -134,22 +134,22 @@ ___
 ## Sources/References
 ___
 
-* [Stackoverflow](https://stackoverflow.com/questions/tagged/python)
+* [Stackoverflow](https://stackoverflow.com/questions/tagged/python "StackOverflow")
 
-* [GeeksforGeeks](https://www.geeksforgeeks.org/)
+* [GeeksforGeeks](https://www.geeksforgeeks.org/ "GeeksForGeeks")
 
-* [Kite](https://www.kite.com/)
+* [Kite](https://www.kite.com/ "Kite")
 
-* [W3Schools](https://www.w3schools.com/python/default.asp)
+* [W3Schools](https://www.w3schools.com/python/default.asp "W3Schools")
 
-* [Tutorialspoint](https://www.tutorialspoint.com/python/)
+* [Tutorialspoint](https://www.tutorialspoint.com/python/ "Python Tutorialspoint")
 
-* [RealPython](https://realpython.com/)
+* [RealPython](https://realpython.com/ "RealPython")
 
-* [Youtube](https://www.youtube.com/watch?v=0C2405R-uGk&t=1s)
+* [YouTube](https://www.youtube.com/watch?v=0C2405R-uGk&t=1s "YouTube - How to Write to Text File")
 
-* [Python Dictionary for State Abbreviations](https://gist.github.com/rogerallen/1583593 )
+* [Python Dictionary for State Abbreviations](https://gist.github.com/rogerallen/1583593 "State Abbreviation Dictionary")
 
-* [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+* [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language) "Wikipedia - Python")
 
-* [Image Source](https://Pexels.com)
+* [Image Source](https://Pexels.com "Pexels")
