@@ -12,9 +12,9 @@ ___
 
 | Assignment | Resources | Scripts | Outputs |
 |:----------:|:---------:|:-------:|:-------:|
-|[PyBank](/tree/main/Py-Bank)|[Budget Data](/blob/main/Py-Bank/Resources/budget_data.csv)|[Bank.py](blob/main/Py-Bank/main.py)|[Financial Analysis](/blob/main/Py-Bank/Analysis/Financial_Analysis.txt)|
-|[PyPoll](/tree/main/Py-Poll)|[Election Data](/blob/main/Py-Poll/Resources/election_data.csv)|[Poll.py](blob/main/Py-Poll/main.py)|[Election Results](/blob/main/Py-Poll/Analysis/Election_Results.txt)|
-|[PyBoss](/tree/main/Py-Boss)|[Employee Data](/blob/main/Py-Boss/Resources/employee_data.csv)|[Boss.py](blob/main/Py-Boss/main.py)|[New Employee Record](/blob/main/Py-Boss/Analysis/cleaned_employee_data.csv)|
+|[PyBank](/Py-Bank)|[Budget Data](/Py-Bank/Resources/budget_data.csv)|[Bank.py](/Py-Bank/main.py)|[Financial Analysis](/Py-Bank/Analysis/Financial_Analysis.txt)|
+|[PyPoll](/Py-Poll)|[Election Data](/Py-Poll/Resources/election_data.csv)|[Poll.py](/Py-Poll/main.py)|[Election Results](/Py-Poll/Analysis/Election_Results.txt)|
+|[PyBoss](/Py-Boss)|[Employee Data](/Py-Boss/Resources/employee_data.csv)|[Boss.py](/Py-Boss/main.py)|[New Employee Record](/Py-Boss/Analysis/cleaned_employee_data.csv)|
 
 ## Objective
 ___
