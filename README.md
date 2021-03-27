@@ -6,6 +6,16 @@ ___
 Python is one of the most common languages used by programmers and engineers across a variety of fields. The popularity in usage is due to the logical syntax that allows ease of code readability, also helped alone by the implemented usage of significant indentation. It is also looked favorably upon by most due to its comprehensive library and list of modules.
 
 ___
+## Glossary
+___
+>Links leading to location of each file/folder
+
+| Assignment | Resources | Scripts | Outputs |
+|:----------:|:---------:|:-------:|:-------:|
+|[PyBank](/tree/main/Py-Bank)|[Budget Data](/blob/main/Py-Bank/Resources/budget_data.csv)|[Bank.py](blob/main/Py-Bank/main.py)|[Financial Analysis](/blob/main/Py-Bank/Analysis/Financial_Analysis.txt)|
+|[PyPoll](/tree/main/Py-Poll)|[Election Data](/blob/main/Py-Poll/Resources/election_data.csv)|[Poll.py](blob/main/Py-Poll/main.py)|[Election Results](/blob/main/Py-Poll/Analysis/Election_Results.txt)|
+|[PyBoss](/tree/main/Py-Boss)|[Employee Data](/blob/main/Py-Boss/Resources/employee_data.csv)|[Boss.py](blob/main/Py-Boss/main.py)|[New Employee Record](/blob/main/Py-Boss/Analysis/cleaned_employee_data.csv)|
+
 ## Objective
 ___
 
