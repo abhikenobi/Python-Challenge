@@ -33,7 +33,7 @@ ___
 
 The real-life situation was that a comapny's financial records needed to be analyzed.
 
-The task was to create a Python script that pulls and analyzes the records of a [bank's monthly budget](/blob/main/Py-Bank/Resources/budget_data.csv "Budget Data") to calculate each of the following:
+The task was to create a Python script that pulls and analyzes the records of a [bank's monthly budget](/Py-Bank/Resources/budget_data.csv "Budget Data") to calculate each of the following:
 
 * The total number of months included in the dataset
 
@@ -45,11 +45,11 @@ The task was to create a Python script that pulls and analyzes the records of a 
 
 * The greatest decrease in losses (date and amount) over the entire period
     
-After calculations the [Python script](/blob/main/Py-Bank/main.py "PyBank Script") then had to be able to print the results into a newly created text file (.txt) in the Analysis folrder and also the terminal as shown below:
+After calculations the [Python script](/Py-Bank/main.py "PyBank Script") then had to be able to print the results into a newly created text file (.txt) in the Analysis folrder and also the terminal as shown below:
 
 ![alttext](Images/py-bank-output.jpg "Terminal output")
 
-The script should then create a new Analysis folder and output the results into a [text file](blob/main/Py-Bank/Analysis/Financial_Analysis.txt "PyBank Output") in that folder.
+The script should then create a new Analysis folder and output the results into a [text file](/Py-Bank/Analysis/Financial_Analysis.txt "PyBank Output") in that folder.
 
 ___
 ## Part 2: Electio Pythonidae 🗳️
@@ -58,7 +58,7 @@ ___
 
 In this part of the challenge, the 'real-life simulation' was that a small, rural town need to modernize its vote counting process.
 
-After being given the [voting poll data](/blob/main/Py-Poll/Resources/election_data.csv "Election Data"), the task was to create a Python script that analyzes the votes and calculates each of the following:
+After being given the [voting poll data](/Py-Poll/Resources/election_data.csv "Election Data"), the task was to create a Python script that analyzes the votes and calculates each of the following:
 
 * The total number of votes cast
 
@@ -70,7 +70,7 @@ After being given the [voting poll data](/blob/main/Py-Poll/Resources/election_d
 
 * The winner of the election based on popular vote.
 
-The [Python Script](/blob/main/Py-Poll/main.py "PyPoll Script") should then be able to export out the caluclations into a new [text file](/blob/main/Py-Poll/Analysis/Election_Results.txt "PyPoll Ouput") as well as the terminal which would look a litte like:
+The [Python Script](/Py-Poll/main.py "PyPoll Script") should then be able to export out the caluclations into a new [text file](/Py-Poll/Analysis/Election_Results.txt "PyPoll Ouput") as well as the terminal which would look a litte like:
 
 ![alttext](Images/py-poll-output.jpg "Terminal output")
 
@@ -116,7 +116,7 @@ ___
 
 In this bonus scenarios, the challenge is to act as the **Boss** of a company that has recently purchased and switched to a new HR system; however, this new system has different requirement in formatting of the employee records data.
 
-The task as the **Boss** is to write a Python script that is able to convert the [old employee data](/blob/main/Py-Boss/Resources/employee_data.csv "Old Employee Format") into the required formal. The script must be able to:
+The task as the **Boss** is to write a Python script that is able to convert the [old employee data](/Py-Boss/Resources/employee_data.csv "Old Employee Format") into the required formal. The script must be able to:
 
 * The `Name` column should be split into separate `First Name` and `Last Name` columns.
 
@@ -134,7 +134,7 @@ The old employee was formatted as:
 
 ![Old Format](Images/py-boss-old-output.JPG "Old FOrmat")
 
-The [Python script](/blob/main/Py-Boss/main.py "PyBoss Script") was able to instead change and clean up the formatting and make a new `csf` [file](/blob/main/Py-Boss/Analysis/cleaned_employee_data.csv "New Employee Format") containing the cleaned data. 
+The [Python script](/Py-Boss/main.py "PyBoss Script") was able to instead change and clean up the formatting and make a new `csf` [file](/Py-Boss/Analysis/cleaned_employee_data.csv "New Employee Format") containing the cleaned data. 
 The new format now looks like:
 
 ![New/Cleaned Format](Images/py-boss-new-output.JPG "New Format")
