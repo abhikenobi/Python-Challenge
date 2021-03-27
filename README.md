@@ -104,28 +104,52 @@ ___
 ___
 ![PyBoss](Images/pexels-the-lazy-artist-gallery-999267.jpg "PyBoss")
 
+In this bonus scenarios, the challenge is to act as the **Boss** of a company that has recently purchased and switched to a new HR system; however, this new system has different requirement in formatting of the employee records data.
+
+The task as the **Boss** is to write a Python script that is able to convert the [old employee data](/blob/main/Py-Boss/Resources/employee_data.csv "Old Employee Format") into the required formal. The script must be able to:
+
+* The `Name` column should be split into separate `First Name` and `Last Name` columns.
+
+* The `DOB` data should be re-written into `MM/DD/YYYY` format.
+
+* The `SSN` data should be re-written such that the first five numbers are hidden from view.
+
+* The `State` data should be re-written as simple two-letter abbreviations.
+
+To achieve the final results, the split function was heavily used. It easily allowed to separate a whole `Name` into the `First Name` and `Last Name` as well as separate the `DOB` from `YYYY-MM-DD` into `MM`, `DD`, and `Year`, which was then easily sorted back into `MM/DD/YYYY`.
+In order to abbreviate the states, a public state dictionary was used which contained the
+full spelling as the **Key** and the abbreviation as the **Value**.
+
+The old employee was formatted as:
+
+![Old Format](Images/py-boss-old-output.JPG "Old FOrmat")
+
+The [Python script](/blob/main/Py-Boss/main.py "PyBoss Script") was able to instead change and clean up the formatting and make a new `csf` [file](/blob/main/Py-Boss/Analysis/cleaned_employee_data.csv "New Employee Format") containing the cleaned data. 
+The new format now looks like:
+
+![New/Cleaned Format](Images/py-boss-new-output.JPG "New Format")
 
 
 ___
 ## Sources/References
 ___
 
-* Stackoverflow https://stackoverflow.com/questions/tagged/python
+* [Stackoverflow](https://stackoverflow.com/questions/tagged/python)
 
-* GeeksforGeeks https://www.geeksforgeeks.org/
+* [GeeksforGeeks](https://www.geeksforgeeks.org/)
 
-* Kite https://www.kite.com/
+* [Kite](https://www.kite.com/)
 
-* W3Schools https://www.w3schools.com/python/default.asp
+* [W3Schools](https://www.w3schools.com/python/default.asp)
 
-* Tutorialspoint https://www.tutorialspoint.com/python/
+* [Tutorialspoint](https://www.tutorialspoint.com/python/)
 
-* RealPython https://realpython.com/
+* [RealPython](https://realpython.com/)
 
-* Youtube https://www.youtube.com/watch?v=0C2405R-uGk&t=1s
+* [Youtube](https://www.youtube.com/watch?v=0C2405R-uGk&t=1s)
 
-* Python Dictionary for State Abbreviations: https://gist.github.com/rogerallen/1583593 
+* [Python Dictionary for State Abbreviations](https://gist.github.com/rogerallen/1583593 )
 
-* Wikipedia: https://en.wikipedia.org/wiki/Python_(programming_language)
+* [Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-* Images Source: https://Pexels.com
+* [Image Source](https://Pexels.com)
