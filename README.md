@@ -31,7 +31,7 @@ ___
 ___
 ![PyBank](Images/pexels-burak-k-187041.jpg "PyBank")
 
-The real-life situation was that a comapny's financial records needed to be analyzed.
+The real-life situation was that a company's financial records needed to be analyzed.
 
 The task was to create a Python script that pulls and analyzes the records of a [bank's monthly budget](/Py-Bank/Resources/budget_data.csv "Budget Data") to calculate each of the following:
 
