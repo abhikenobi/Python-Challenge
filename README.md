@@ -134,7 +134,7 @@ The old employee was formatted as:
 
 ![Old Format](Images/py-boss-old-output.JPG "Old FOrmat")
 
-The [Python script](/Py-Boss/main.py "PyBoss Script") was able to instead change and clean up the formatting and make a new `csf` [file](/Py-Boss/Analysis/cleaned_employee_data.csv "New Employee Format") containing the cleaned data. 
+The [Python script](/Py-Boss/main.py "PyBoss Script") was able to instead change and clean up the formatting and make a new `csv` [file](/Py-Boss/Analysis/cleaned_employee_data.csv "New Employee Format") containing the cleaned data. 
 The new format now looks like:
 
 ![New/Cleaned Format](Images/py-boss-new-output.JPG "New Format")
